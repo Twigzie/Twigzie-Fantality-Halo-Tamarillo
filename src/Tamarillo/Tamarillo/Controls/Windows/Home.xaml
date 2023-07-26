@@ -17,6 +17,7 @@
         ResizeMode="CanResizeWithGrip"
         BorderThickness="1"
         SnapsToDevicePixels="True"
+        StateChanged="OnWindowChanged"
         RenderOptions.BitmapScalingMode="HighQuality"
         Background="{DynamicResource DEFAULT_WindowBackground}" 
         BorderBrush="{DynamicResource DEFAULT_WindowBorder}" 
@@ -80,11 +81,11 @@
             <Menu Grid.Column="1"
                   VerticalAlignment="Center" 
                   HorizontalAlignment="Left">
-                <MenuItem Header="File" 
+                <!--<MenuItem Header="File" 
                           WindowChrome.IsHitTestVisibleInChrome="True">
                     <MenuItem Header="Exit"
                               Click="OnWindowClose"/>
-                </MenuItem>
+                </MenuItem>-->
             </Menu>
 
             <!--TITLE-->

@@ -54,6 +54,9 @@
   <PropertyGroup>
     <StartupObject>Tamarillo.App.Base</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gameloop.Vdf, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gameloop.Vdf.0.6.2\lib\net45\Gameloop.Vdf.dll</HintPath>
@@ -337,6 +340,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\Icons\icon_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.6.4\build\Fody.targets" Condition="Exists('..\packages\Fody.6.6.4\build\Fody.targets')" />

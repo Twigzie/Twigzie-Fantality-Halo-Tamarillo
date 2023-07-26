@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <BitmapImage x:Key="UI_Icon" UriSource="/Resources/Images/Icons/icon.png"/>
+    <BitmapImage x:Key="UI_Icon" UriSource="/icon.ico"/>
     
     <DrawingImage x:Key="UI_CloseIcon">
         <DrawingImage.Drawing>

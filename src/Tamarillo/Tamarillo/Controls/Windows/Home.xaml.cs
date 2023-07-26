@@ -71,12 +71,6 @@ namespace Tamarillo.Controls.Windows {
             InitializeComponent();
         }
 
-        private void OnAbout(object sender, RoutedEventArgs e) {
-
-
-
-        }
-
         [SuppressPropertyChangedWarnings]
         private void OnWindowChanged(object sender, EventArgs e) {
             switch (WindowState) {
