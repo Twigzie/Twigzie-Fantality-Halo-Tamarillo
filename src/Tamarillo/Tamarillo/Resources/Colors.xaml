@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Icons-->
+    <SolidColorBrush x:Key="DEFAULT_IconColor" Color="Silver"/>
+
+    <!--Window-->
+    <SolidColorBrush x:Key="DEFAULT_WindowBorder"         Color="#FF505050"/>
+    <SolidColorBrush x:Key="DEFAULT_WindowBackground"     Color="#FF282828"/>
+    <SolidColorBrush x:Key="DEFAULT_WindowBackgroundDark" Color="#FF151515"/>
+    <SolidColorBrush x:Key="DEFAULT_WindowForeground"     Color="#FFAEB0AE"/>
+
+</ResourceDictionary>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props" Condition="Exists('..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A08A4608-9C5A-4D3A-B094-4F36E7A3C346}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tamarillo</RootNamespace>
+    <AssemblyName>Tamarillo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.IncrementOnDemand.IncrementOnDemandWithResetOnIncrease.DateStamp</AssemblyVersionSettings>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SemVer1</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <AssemblyFileVersionSettings>None.IncrementOnDemand.IncrementOnDemandWithResetOnIncrease.DateStamp</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>
+    </AssemblyInfoVersionSettings>
+    <AssemblyInfoFilePath>Properties\AssemblyInfo.cs</AssemblyInfoFilePath>
+    <AssemblyInfoVersionSemVerSettings>AssemblyVersion.IncrementWithAutoReset.None</AssemblyInfoVersionSemVerSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Tamarillo.App.Base</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gameloop.Vdf, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gameloop.Vdf.0.6.2\lib\net45\Gameloop.Vdf.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.4.1.0\lib\net40\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App\Base.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\Tabs\Maps\MapContainer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Windows\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App\Base.xaml.cs">
+      <DependentUpon>Base.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Commands\RelayCommand.cs" />
+    <Compile Include="Classes\Commands\RelayGenericParamCommand.cs" />
+    <Compile Include="Classes\Commands\RelayParamCommand.cs" />
+    <Compile Include="Classes\Converters\Base\IConverter.cs" />
+    <Compile Include="Classes\Converters\NotBoolToVisibilityConverter.cs" />
+    <Compile Include="Classes\Converters\IsBoolToVisibilityConverter.cs" />
+    <Compile Include="Classes\Converters\CountToBoolConverter.cs" />
+    <Compile Include="Classes\Converters\MapToImageConverter.cs" />
+    <Compile Include="Classes\Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Classes\Converters\TypeToImageConverter.cs" />
+    <Compile Include="Classes\Entities\Maps\MapFile.cs" />
+    <Compile Include="Classes\Entities\Maps\MapSettings.cs" />
+    <Compile Include="Classes\Entities\Design\DesignSettings.cs" />
+    <Compile Include="Classes\Helpers\Extensions\BaseExtensions.cs" />
+    <Compile Include="Classes\Helpers\Extensions\CollectionExtensions.cs" />
+    <Compile Include="Classes\Helpers\Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Classes\Helpers\MapInfo.cs" />
+    <Compile Include="Classes\Helpers\Native.cs" />
+    <Compile Include="Classes\Helpers\Enums.cs" />
+    <Compile Include="Classes\Models\Base\Model.cs" />
+    <Compile Include="Classes\Models\Locator.cs" />
+    <Compile Include="Classes\Models\Main\AppModel.cs" />
+    <Compile Include="Classes\Models\Tabs\Application\TabAboutModel.cs" />
+    <Compile Include="Classes\Models\Tabs\TabModel.cs" />
+    <Compile Include="Controls\Tabs\Maps\MapContainer.xaml.cs">
+      <DependentUpon>MapContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Windows\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Maps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Maps\h1\h1_map_battlecreek.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_bloodgulch.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_boardingaction.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_chillout.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_chirontl34.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_damnation.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_dangercanyon.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_deathisland.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_derelict.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_gephyrophobia.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_hangemhigh.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_icefields.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_infinity.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_longest.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_prisoner.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_ratrace.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_sidewinder.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_timberland.png" />
+    <Resource Include="Resources\Images\Maps\h1\h1_map_wizard.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_awash.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_bloodline.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_lockdown.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_nebula.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_remnant.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_shrine.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_skyward.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_stonetown.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_warlord.png" />
+    <Resource Include="Resources\Images\Maps\h2a\h2a_map_zenith.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_ascension.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_backwash.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_beavercreek.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_burialmounds.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_coagulation.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_colossus.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_containment.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_desolation.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_district.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_elongation.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_foundation.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_gemini.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_headlong.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_ivorytower.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_lockout.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_midship.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_relic.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_sanctuary.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_terminal.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_tombstone.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_turf.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_uplift.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_warlock.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_waterworks.png" />
+    <Resource Include="Resources\Images\Maps\h2\h2_map_zanzibar.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_assembly.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_avalanche.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_blackout.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_coldstorage.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_construct.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_epitaph.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_foundry.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_ghosttown.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_guardian.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_heretic.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_highground.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_isolation.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_lastresort.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_longshore.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_narrows.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_orbital.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_ratsnest.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_s3d_edge.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_s3d_turf.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_s3d_waterfall.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_sandbox.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_sandtrap.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_snowbound.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_standoff.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_thepit.png" />
+    <Resource Include="Resources\Images\Maps\h3\h3_map_valhalla.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_abandon.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_adrift.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_complex.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_daybreak.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_erosion.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_exile.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_forgeisland.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_harvest.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_haven.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_impact.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_landfall.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_longbow.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_meltdown.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_monolith.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_outcast.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_perdition.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_pitfall.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_ragnarok.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_ravine.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_shatter.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_skyline.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_solace.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_vertigo.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_vortex.png" />
+    <Resource Include="Resources\Images\Maps\h4\h4_map_wreckage.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_anchor9.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_battlecanyon.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_boardwalk.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_boneyard.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_breakneck.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_breakpoint.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_condemned.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_countdown.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_forgeworld.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_highlands.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_highnoon.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_penance.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_powerhouse.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_reflection.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_ridgeline.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_solitary.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_spire.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_swordbase.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_tempest.png" />
+    <Resource Include="Resources\Images\Maps\hr\hr_map_zealot.png" />
+    <Resource Include="Resources\Images\Maps\map_unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\Games\H1.png" />
+    <Resource Include="Resources\Images\Icons\Games\H2.png" />
+    <Resource Include="Resources\Images\Icons\Games\H2A.png" />
+    <Resource Include="Resources\Images\Icons\Games\H3.png" />
+    <Resource Include="Resources\Images\Icons\Games\H3O.png" />
+    <Resource Include="Resources\Images\Icons\Games\H4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\Games\HR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Maps\h3\h3_map_fortress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_remove.png" />
+    <Resource Include="Resources\Images\Icons\icon_restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_view_installed.png" />
+    <Resource Include="Resources\Images\Icons\icon_view_removed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_view_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\icon_refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.6.4\build\Fody.targets" Condition="Exists('..\packages\Fody.6.6.4\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.6.4\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.6.4\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props'))" />
+  </Target>
+</Project>
