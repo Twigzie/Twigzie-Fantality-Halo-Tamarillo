@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Windows;
 using System.Windows.Input;
 using Tamarillo.Classes.Commands;
 using Tamarillo.Classes.Entities.Maps;
@@ -27,8 +26,7 @@ namespace Tamarillo.Classes.Models.Main {
                 Version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion,
                 Status = "Ready"
             };
-            if (Instance != null)
-                Instance.Initialize();
+            Instance?.Initialize();
         }
         public static AppModel Instance {
             get;
@@ -88,15 +86,6 @@ namespace Tamarillo.Classes.Models.Main {
             private set;
         }
 
-        #region Menu
-
-        public ICommand OnExitCommand => new RelayCommand(() => {
-
-            Application.Current.Shutdown(0);
-
-        });
-
-        #endregion
         #region Tabs
 
         public ICommand OpenTabCommad => new RelayParamCommand((arg) => {
@@ -182,7 +171,7 @@ namespace Tamarillo.Classes.Models.Main {
                 Status = "Initializing";
                 Version = GetFileVersion(Assembly.GetExecutingAssembly());
 
-                Root = new DirectoryInfo(@"C:\Program Files (x86)\Steam\steamapps\common\Halo The Master Chief Collection");
+                Root = Steam.GetInstallDirectory();
 
                 H1Settings  = new MapSettings(Game.H1, Path.Combine(Root.FullName, "halo1\\maps"));
                 H2Settings  = new MapSettings(Game.H2, Path.Combine(Root.FullName, "halo2\\h2_maps_win64_dx11"));

@@ -65,6 +65,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -114,6 +115,9 @@
     <Compile Include="Classes\Helpers\MapInfo.cs" />
     <Compile Include="Classes\Helpers\Native.cs" />
     <Compile Include="Classes\Helpers\Enums.cs" />
+    <Compile Include="Classes\Helpers\Paths.cs" />
+    <Compile Include="Classes\Helpers\Config.cs" />
+    <Compile Include="Classes\Helpers\Steam.cs" />
     <Compile Include="Classes\Models\Base\Model.cs" />
     <Compile Include="Classes\Models\Locator.cs" />
     <Compile Include="Classes\Models\Main\AppModel.cs" />

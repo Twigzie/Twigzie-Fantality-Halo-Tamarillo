@@ -18,4 +18,4 @@ using System.Windows;
 [assembly: Guid("E6886BBE-0760-4532-9B4C-57560138996E")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyInformationalVersion("1.0.203")]
+[assembly: AssemblyInformationalVersion("1.0.221")]

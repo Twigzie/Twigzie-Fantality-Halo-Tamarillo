@@ -12,26 +12,7 @@ namespace Tamarillo.App {
         private void OnStartup(object sender, StartupEventArgs e) {
             try {
 
-                using (var steamKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Steam")) {
-
-                    if (steamKey == null)
-                        throw new Exception("Unable to locate Steam installation.");
-
-                    var steamPath = steamKey.GetValue("SteamPath");
-                    if (steamPath == null)
-                        throw new Exception("Unable to locate 'SteamPath' using the specified installation.");
-
-                    var steamInstall = steamPath.ToString();
-                    if (string.IsNullOrEmpty(steamInstall) || Directory.Exists(steamInstall) == false)
-                        throw new Exception("Unable to locate directory using the specified 'SteamPath'.");
-
-                    var steamTarget = Path.Combine(steamInstall, @"steamapps\common\Halo The Master Chief Collection");
-                    if (Directory.Exists(steamTarget) == false)
-                        throw new Exception("Unable to locate directory for 'Halo: The Master Chief Collection'.");
-
-                    Process.Start(steamTarget);
-
-                }
+                Config.Instance.Load();
 
             }
             catch (Exception ex) {
