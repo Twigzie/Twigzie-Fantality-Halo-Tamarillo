@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -69,6 +70,13 @@ namespace Tamarillo.Controls.Windows {
 
         public Home() {
             InitializeComponent();
+        }
+
+        private void OnMenuGithub(object sender, RoutedEventArgs e) {
+            Process.Start("https://github.com/Twigzie/Twigzie-Fantality-Halo-Tamarillo");
+        }
+        private void OnMenuAbout(object sender, RoutedEventArgs e) {
+            MessageBox.Show("Coded with love by: Twigzie\r\n\nReason: I'm too lazy to keep renaming map files everytime I want to enable or disable them...\r\n\nSketchness: Absolutely none.. Application doesn't read any sensitive data or mine any bitcoin lol. The source is hosted on Github (... > Github) but if you still don't believe me, you can always compile it yourself (if you haven't already)", "About", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         [SuppressPropertyChangedWarnings]

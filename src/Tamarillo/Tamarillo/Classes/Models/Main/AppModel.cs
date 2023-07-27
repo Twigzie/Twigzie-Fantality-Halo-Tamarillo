@@ -171,7 +171,7 @@ namespace Tamarillo.Classes.Models.Main {
                 Status = "Initializing";
                 Version = GetFileVersion(Assembly.GetExecutingAssembly());
 
-                Root = Steam.GetInstallDirectory();
+                Root = Config.GetInstallDirectory();
 
                 H1Settings  = new MapSettings(Game.H1, Path.Combine(Root.FullName, "halo1\\maps"));
                 H2Settings  = new MapSettings(Game.H2, Path.Combine(Root.FullName, "halo2\\h2_maps_win64_dx11"));

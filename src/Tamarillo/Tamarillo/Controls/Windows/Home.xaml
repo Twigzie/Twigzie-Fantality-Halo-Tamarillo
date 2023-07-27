@@ -81,11 +81,13 @@
             <Menu Grid.Column="1"
                   VerticalAlignment="Center" 
                   HorizontalAlignment="Left">
-                <!--<MenuItem Header="File" 
+                <MenuItem Header="..." 
                           WindowChrome.IsHitTestVisibleInChrome="True">
-                    <MenuItem Header="Exit"
-                              Click="OnWindowClose"/>
-                </MenuItem>-->
+                    <MenuItem Header="Github"
+                              Click="OnMenuGithub"/>
+                    <MenuItem Header="About"
+                              Click="OnMenuAbout"/>
+                </MenuItem>
             </Menu>
 
             <!--TITLE-->
