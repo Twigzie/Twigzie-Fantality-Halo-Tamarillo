@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using Tamarillo.Classes.Entities.Maps;
 using static Tamarillo.Classes.Helpers.Paths;
 using MessageBox = System.Windows.MessageBox;
 
@@ -28,6 +30,18 @@ namespace Tamarillo.Classes.Helpers {
         public string Root {
             get; set;
         }
+        [DataMember(IsRequired = true, Name = "rename_prompt", Order = 1)]
+        public bool PromptToRename {
+            get; set;
+        }
+        [DataMember(IsRequired = true, Name = "installed_maps", Order = 2)]
+        public List<MapFile> InstalledMaps {
+            get; set;
+        }
+        [DataMember(IsRequired = true, Name = "uninstalled_maps", Order = 3)]
+        public List<MapFile> UninstalledMaps {
+            get; set;
+        }
 
         public bool Load() {
             try {
@@ -36,11 +50,13 @@ namespace Tamarillo.Classes.Helpers {
 
                     var serializer = new DataContractJsonSerializer(typeof(Config));
                     using (var reader = new FileStream(Settings, FileMode.Open, FileAccess.Read)) {
-                        Config temp = serializer.ReadObject(reader) as Config;
-                        if (temp == null)
+                        if (!(serializer.ReadObject(reader) is Config temp))
                             return false;
                         else {
                             Root = temp.Root;
+                            PromptToRename = temp.PromptToRename;
+                            InstalledMaps = temp.InstalledMaps;
+                            UninstalledMaps = temp.UninstalledMaps;
                         }
                     }
 
@@ -48,6 +64,9 @@ namespace Tamarillo.Classes.Helpers {
                 else {
 
                     Root = "";
+                    PromptToRename = true;
+                    InstalledMaps = new List<MapFile>();
+                    UninstalledMaps = new List<MapFile>();
 
                     return Save();
 
@@ -73,6 +92,35 @@ namespace Tamarillo.Classes.Helpers {
             }
             catch {
                 return false;
+            }
+        }
+
+        public static void AddInstalledMap(MapFile map) {
+            try {
+
+                if (Instance.InstalledMaps.Contains(map))
+                    return;
+
+                map.LastInstalled = DateTime.UtcNow.Millisecond;
+                Instance.InstalledMaps.Add(map);
+
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+        public static void RemoveInstalledMap(MapFile map) {
+            try {
+
+                if (Instance.UninstalledMaps.Contains(map) == false)
+                    return;
+
+                map.LastUninstalled = DateTime.UtcNow.Millisecond;
+                Instance.InstalledMaps.Add(map);
+
+            }
+            catch (Exception ex) {
+                throw ex;
             }
         }
 

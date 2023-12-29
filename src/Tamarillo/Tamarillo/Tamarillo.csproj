@@ -88,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\Windows\Dialogs\Rename.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Windows\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -124,6 +128,9 @@
     <Compile Include="Classes\Models\Tabs\TabModel.cs" />
     <Compile Include="Controls\Tabs\Maps\MapContainer.xaml.cs">
       <DependentUpon>MapContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Windows\Dialogs\Rename.xaml.cs">
+      <DependentUpon>Rename.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Windows\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>

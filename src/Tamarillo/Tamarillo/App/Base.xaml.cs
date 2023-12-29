@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
 using System.Windows;
 using System.Windows.Threading;
-using Microsoft.Win32;
 using Tamarillo.Classes.Helpers;
+using Tamarillo.Controls.Windows.Dialogs;
 
 namespace Tamarillo.App {
     public partial class Base : Application {
@@ -13,6 +11,13 @@ namespace Tamarillo.App {
             try {
 
                 Config.Instance.Load();
+
+                if (Config.Instance.PromptToRename) {
+                    if (new Rename().ShowDialog() == false) {
+                    }
+                    else {
+                    }
+                }
 
             }
             catch (Exception ex) {

@@ -1,16 +1,30 @@
 ﻿using System.IO;
+using System.Runtime.Serialization;
 using Tamarillo.Classes.Helpers;
 using Tamarillo.Classes.Models.Base;
 
 namespace Tamarillo.Classes.Entities.Maps {
 
+    [DataContract]
     public class MapFile : Model {
 
-        public Game Type {
+        [DataMember(Name = "name", Order = 0)]
+        public string Name {
             get;
             private set;
         }
-        public string Name {
+        [DataMember(Name = "last_installed", Order = 1)]
+        public int LastInstalled {
+            get;
+            set;
+        }
+        [DataMember(Name = "last_uninstalled", Order = 2)]
+        public int LastUninstalled {
+            get;
+            set;
+        }
+
+        public Game Type {
             get;
             private set;
         }

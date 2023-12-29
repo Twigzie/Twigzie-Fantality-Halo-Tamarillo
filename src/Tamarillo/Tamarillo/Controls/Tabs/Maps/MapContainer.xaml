@@ -1,67 +1,71 @@
-﻿<UserControl x:Class="Tamarillo.Controls.Tabs.Maps.MapContainer"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:CONVERTERS="clr-namespace:Tamarillo.Classes.Converters"
-             xmlns:MAP_SETTINGS="clr-namespace:Tamarillo.Classes.Entities.Maps"
-             xmlns:DESIGN_SETTINGS="clr-namespace:Tamarillo.Classes.Entities.Design"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" 
-             d:DesignWidth="800"
-             d:DataContext="{d:DesignInstance DESIGN_SETTINGS:DesignSettings, IsDesignTimeCreatable=True}"
-             Background="{DynamicResource DEFAULT_WindowBackground}">
+﻿<UserControl
+    x:Class="Tamarillo.Controls.Tabs.Maps.MapContainer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CONVERTERS="clr-namespace:Tamarillo.Classes.Converters"
+    xmlns:DESIGN_SETTINGS="clr-namespace:Tamarillo.Classes.Entities.Design"
+    xmlns:MAP_SETTINGS="clr-namespace:Tamarillo.Classes.Entities.Maps"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignInstance DESIGN_SETTINGS:DesignSettings,
+                                     IsDesignTimeCreatable=True}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="{DynamicResource DEFAULT_WindowBackground}"
+    mc:Ignorable="d">
 
     <UserControl.Resources>
         <Style TargetType="Button">
-            <Setter Property="Width" Value="35"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Margin" Value="0 0 4 4"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Foreground" Value="{StaticResource DEFAULT_WindowForeground}"/>
-            <Setter Property="Background" Value="{StaticResource DEFAULT_WindowBackground}"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Padding" Value="5,0,5,0"/>
+            <Setter Property="Width" Value="35" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="0,0,4,4" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Foreground" Value="{StaticResource DEFAULT_WindowForeground}" />
+            <Setter Property="Background" Value="{StaticResource DEFAULT_WindowBackground}" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Padding" Value="5,0,5,0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border"
-                                                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                                                    Background="{TemplateBinding Background}"
-                                                                    Width="{TemplateBinding Width}"
-                                                                    Height="{TemplateBinding Height}">
-                            <ContentPresenter x:Name="contentPresenter"
-                                                                                  Focusable="False"
-                                                                                  VerticalAlignment="Center"
-                                                                                  HorizontalAlignment="Center"/>
+                        <Border
+                            x:Name="border"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Focusable="False" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="False"/>
+                                    <Condition Property="IsMouseOver" Value="False" />
                                 </MultiTrigger.Conditions>
-                                <Setter Property="Effect" Value="{StaticResource DEFAULT_DropShadow}"/>
-                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Effect" Value="{StaticResource DEFAULT_DropShadow}" />
+                                <Setter Property="Background" Value="Transparent" />
                             </MultiTrigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="True"/>
-                                    <Condition Property="IsEnabled" Value="True"/>
-                                    <Condition Property="IsPressed" Value="False"/>
+                                    <Condition Property="IsMouseOver" Value="True" />
+                                    <Condition Property="IsEnabled" Value="True" />
+                                    <Condition Property="IsPressed" Value="False" />
                                 </MultiTrigger.Conditions>
                                 <Setter TargetName="border" Property="Background" Value="#FF464646" />
                                 <Setter Property="Foreground" Value="{StaticResource DEFAULT_WindowForeground}" />
                             </MultiTrigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="True"/>
-                                    <Condition Property="IsEnabled" Value="True"/>
-                                    <Condition Property="IsPressed" Value="True"/>
+                                    <Condition Property="IsMouseOver" Value="True" />
+                                    <Condition Property="IsEnabled" Value="True" />
+                                    <Condition Property="IsPressed" Value="True" />
                                 </MultiTrigger.Conditions>
                                 <Setter TargetName="border" Property="Background" Value="#FF202020" />
-                                <Setter Property="Effect" Value="{StaticResource DEFAULT_DropShadow}"/>
+                                <Setter Property="Effect" Value="{StaticResource DEFAULT_DropShadow}" />
                             </MultiTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -73,136 +77,162 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0"
-                Height="30">
+        <Border Grid.Row="0" Height="30">
             <Grid>
-                
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="1"
-                        Width="30"
-                        Height="25"
-                        ToolTip="Refresh"
-                        Command="{Binding DataContext.RefreshMapsCommand, ElementName=Items}" 
-                        Margin="0,0,0,0">
+                <Button
+                    Grid.Column="1"
+                    Width="30"
+                    Height="25"
+                    Margin="0,0,0,0"
+                    Command="{Binding DataContext.RefreshMapsCommand, ElementName=Items}"
+                    ToolTip="Refresh">
                     <Button.Content>
-                        <Image Source="{StaticResource UI_IconRefresh}" Stretch="Fill" Width="20" Height="20"/>
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Source="{StaticResource UI_IconRefresh}"
+                            Stretch="Fill" />
                     </Button.Content>
                 </Button>
-                <Button Grid.Column="2"
-                        Width="30"
-                        Height="25"
-                        ToolTip="View Installed"
-                        Command="{Binding DataContext.ViewInstalledMapsCommand, ElementName=Items}" 
-                        Margin="0,0,0,0">
+                <Button
+                    Grid.Column="2"
+                    Width="30"
+                    Height="25"
+                    Margin="0,0,0,0"
+                    Command="{Binding DataContext.ViewInstalledMapsCommand, ElementName=Items}"
+                    ToolTip="View Installed">
                     <Button.Content>
-                        <Image Source="{StaticResource UI_IconViewInstalled}" Stretch="Fill" Width="20" Height="20"/>
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Source="{StaticResource UI_IconViewInstalled}"
+                            Stretch="Fill" />
                     </Button.Content>
                 </Button>
-                <Button Grid.Column="3"
-                        Width="30"
-                        Height="25"
-                        ToolTip="View Uninstalled"
-                        Command="{Binding DataContext.ViewUninstalledMapsCommand, ElementName=Items}"
-                        Margin="0,0,0,0">
+                <Button
+                    Grid.Column="3"
+                    Width="30"
+                    Height="25"
+                    Margin="0,0,0,0"
+                    Command="{Binding DataContext.ViewUninstalledMapsCommand, ElementName=Items}"
+                    ToolTip="View Uninstalled">
                     <Button.Content>
-                        <Image Source="{StaticResource UI_IconViewRemoved}" Stretch="Fill" Width="20" Height="20"/>
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Source="{StaticResource UI_IconViewRemoved}"
+                            Stretch="Fill" />
                     </Button.Content>
                 </Button>
-                <Button Grid.Column="4"
-                        Width="30"
-                        Height="25"
-                        ToolTip="View All"
-                        Command="{Binding DataContext.ViewAllMapsCommand, ElementName=Items}" 
-                        Margin="0,0,0,0">
+                <Button
+                    Grid.Column="4"
+                    Width="30"
+                    Height="25"
+                    Margin="0,0,0,0"
+                    Command="{Binding DataContext.ViewAllMapsCommand, ElementName=Items}"
+                    ToolTip="View All">
                     <Button.Content>
-                        <Image Source="{StaticResource UI_IconViewAll}" Stretch="Fill" Width="20" Height="20"/>
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Source="{StaticResource UI_IconViewAll}"
+                            Stretch="Fill" />
                     </Button.Content>
                 </Button>
-                
+
             </Grid>
         </Border>
 
-        <ScrollViewer Grid.Row="1"
-                      VerticalScrollBarVisibility="Auto" 
-                      HorizontalScrollBarVisibility="Disabled" 
-                      Template="{DynamicResource UiScrollViewer}">
+        <ScrollViewer
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Disabled"
+            Template="{DynamicResource UiScrollViewer}"
+            VerticalScrollBarVisibility="Auto">
 
             <ScrollViewer.Resources>
                 <ControlTemplate x:Key="UiScrollViewer" TargetType="{x:Type ScrollViewer}">
-                    <Grid x:Name="Grid" 
-                          Background="{TemplateBinding Background}">
+                    <Grid x:Name="Grid" Background="{TemplateBinding Background}">
 
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Rectangle x:Name="Corner" 
-                                   Grid.Row="1"
-                                   Grid.Column="1" 
-                                   Fill="{x:Null}"/>
+                        <Rectangle
+                            x:Name="Corner"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Fill="{x:Null}" />
 
-                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" 
-                                                Grid.Row="0"
-                                                Grid.Column="0"
-                                                CanContentScroll="{TemplateBinding CanContentScroll}" 
-                                                CanHorizontallyScroll="False" 
-                                                CanVerticallyScroll="False" 
-                                                ContentTemplate="{TemplateBinding ContentTemplate}" 
-                                                Content="{TemplateBinding Content}"                                             
-                                                Margin="{TemplateBinding Padding}" />
+                        <ScrollContentPresenter
+                            x:Name="PART_ScrollContentPresenter"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="{TemplateBinding Padding}"
+                            CanContentScroll="{TemplateBinding CanContentScroll}"
+                            CanHorizontallyScroll="False"
+                            CanVerticallyScroll="False"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}" />
 
-                        <ScrollBar x:Name="PART_VerticalScrollBar" 
-                                   AutomationProperties.AutomationId="VerticalScrollBar" 
-                                   Cursor="Arrow"
-                                   Grid.Row="0" 
-                                   Grid.Column="1" 
-                                   Maximum="{TemplateBinding ScrollableHeight}" 
-                                   Minimum="0"                                
-                                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" 
-                                   Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" 
-                                   ViewportSize="{TemplateBinding ViewportHeight}"/>
+                        <ScrollBar
+                            x:Name="PART_VerticalScrollBar"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationProperties.AutomationId="VerticalScrollBar"
+                            Cursor="Arrow"
+                            Maximum="{TemplateBinding ScrollableHeight}"
+                            Minimum="0"
+                            ViewportSize="{TemplateBinding ViewportHeight}"
+                            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                            Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
 
                     </Grid>
                 </ControlTemplate>
             </ScrollViewer.Resources>
 
-            <ItemsControl x:Name="Items" 
-                          ItemsSource="{Binding Path=Maps}" 
-                          d:DataContext="{d:DesignInstance Type=DESIGN_SETTINGS:DesignSettings, IsDesignTimeCreatable=True}" Padding="2,2">
+            <ItemsControl
+                x:Name="Items"
+                Padding="2,2"
+                d:DataContext="{d:DesignInstance Type=DESIGN_SETTINGS:DesignSettings,
+                                                 IsDesignTimeCreatable=True}"
+                ItemsSource="{Binding Path=Maps}">
 
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True"/>
+                        <WrapPanel IsItemsHost="True" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="MAP_SETTINGS:MapFile">
 
-                        <Border Height="130" 
-                                Width="380"
-                                Margin="2"
-                                BorderThickness="1"
-                                Tag="{Binding}" 
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Top"
-                                Visibility="{Binding Path=IsVisible, Converter={CONVERTERS:IsBoolToVisibilityConverter}}">
+                        <Border
+                            Width="380"
+                            Height="130"
+                            Margin="2"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            BorderThickness="1"
+                            Tag="{Binding}"
+                            Visibility="{Binding Path=IsVisible, Converter={CONVERTERS:IsBoolToVisibilityConverter}}">
 
                             <Border.Style>
                                 <Style>
@@ -219,117 +249,124 @@
 
                             <Grid>
 
-                                <!--  -->
+                                <!--    -->
                                 <Grid Grid.Column="0">
 
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
 
-                                    <!-- Map Image -->
-                                    <Image x:Name="image" 
-                                           Grid.Row="0" 
-                                           Grid.ColumnSpan="2"
-                                           Width="380"
-                                           Height="180"
-                                           Grid.RowSpan="2"
-                                           Source="{Binding Path=Image, Converter={CONVERTERS:MapToImageConverter}}">
+                                    <!--  Map Image  -->
+                                    <Image
+                                        x:Name="image"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.ColumnSpan="2"
+                                        Width="380"
+                                        Height="180"
+                                        Source="{Binding Path=Image, Converter={CONVERTERS:MapToImageConverter}}">
                                         <Image.Style>
                                             <Style TargetType="Image">
                                                 <Setter Property="Opacity" Value="0.5" />
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{Binding Path=IsRemoved}" Value="false">
-                                                        <Setter Property="Opacity" Value="1"/>
+                                                        <Setter Property="Opacity" Value="1" />
                                                     </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </Image.Style>
                                     </Image>
 
-                                    <Image x:Name="icon" 
-                                           Grid.Row="0" 
-                                           Grid.Column="1"
-                                           Width="45"
-                                           Height="45"
-                                           Source="{StaticResource UI_IconNew}">
+                                    <Image
+                                        x:Name="icon"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Width="45"
+                                        Height="45"
+                                        Source="{StaticResource UI_IconNew}">
                                         <Image.Style>
                                             <Style TargetType="Image">
                                                 <Setter Property="Visibility" Value="Hidden" />
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{Binding Path=IsRemoved}" Value="true">
-                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                        <Setter Property="Visibility" Value="Visible" />
                                                     </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </Image.Style>
                                     </Image>
 
-                                    <!-- Details Panel -->
-                                    <Grid x:Name="grid" 
-                                          Grid.Row="1"
-                                          Grid.ColumnSpan="2"
-                                          Height="80"
-                                          Background="#4C000000"
-                                          HorizontalAlignment="Left"
-                                          VerticalAlignment="Bottom"
-                                          Width="{Binding ActualWidth, ElementName=image, Mode=OneWay}">
+                                    <!--  Details Panel  -->
+                                    <Grid
+                                        x:Name="grid"
+                                        Grid.Row="1"
+                                        Grid.ColumnSpan="2"
+                                        Width="{Binding ActualWidth, ElementName=image, Mode=OneWay}"
+                                        Height="80"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Bottom"
+                                        Background="#4C000000">
 
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                        <!-- Name -->
-                                        <Label Grid.Row="0"
-                                               Content="{Binding Path=Name}"
-                                               VerticalContentAlignment="Center"
-                                               Height="35" 
-                                               Padding="5,0"
-                                               Foreground="#FFEDEDED"
-                                               FontSize="20" Margin="5,5,5,5"/>
+                                        <!--  Name  -->
+                                        <Label
+                                            Grid.Row="0"
+                                            Height="35"
+                                            Margin="5,5,5,5"
+                                            Padding="5,0"
+                                            VerticalContentAlignment="Center"
+                                            Content="{Binding Path=Name}"
+                                            FontSize="20"
+                                            Foreground="#FFEDEDED" />
 
-                                        <!-- Options -->
-                                        <Grid Grid.Row="1"
-                                              Effect="{DynamicResource DEFAULT_DropShadow}">
+                                        <!--  Options  -->
+                                        <Grid Grid.Row="1" Effect="{DynamicResource DEFAULT_DropShadow}">
 
                                             <Grid Grid.Column="1">
 
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
                                                 </Grid.ColumnDefinitions>
 
-                                                <Button Grid.Column="1"
-                                                    ToolTip="Locate"
-                                                    Command="{Binding DataContext.LocateMapCommand, ElementName=Items}" 
-                                                    CommandParameter="{Binding}">
+                                                <Button
+                                                    Grid.Column="1"
+                                                    Command="{Binding DataContext.LocateMapCommand, ElementName=Items}"
+                                                    CommandParameter="{Binding}"
+                                                    ToolTip="Locate">
                                                     <Button.Content>
-                                                        <Image Source="{StaticResource UI_IconBrowse}" Width="32"/>
+                                                        <Image Width="32" Source="{StaticResource UI_IconBrowse}" />
                                                     </Button.Content>
                                                 </Button>
-                                                <Button Grid.Column="2"
-                                                        ToolTip="Remove"
-                                                        Command="{Binding DataContext.UninstallMapCommand, ElementName=Items}" 
-                                                        CommandParameter="{Binding}"
-                                                        Visibility="{Binding Path=IsRemoved, Converter={CONVERTERS:NotBoolToVisibilityConverter}}">
+                                                <Button
+                                                    Grid.Column="2"
+                                                    Command="{Binding DataContext.UninstallMapCommand, ElementName=Items}"
+                                                    CommandParameter="{Binding}"
+                                                    ToolTip="Remove"
+                                                    Visibility="{Binding Path=IsRemoved, Converter={CONVERTERS:NotBoolToVisibilityConverter}}">
                                                     <Button.Content>
-                                                        <Image Source="{StaticResource UI_IconRemove}" Width="22"/>
+                                                        <Image Width="22" Source="{StaticResource UI_IconRemove}" />
                                                     </Button.Content>
                                                 </Button>
-                                                <Button Grid.Column="3"
-                                                        ToolTip="Restore"
-                                                        Command="{Binding DataContext.ReinstallMapCommand, ElementName=Items}" 
-                                                        CommandParameter="{Binding}"
-                                                        Visibility="{Binding Path=IsRemoved, Converter={CONVERTERS:IsBoolToVisibilityConverter}}">
+                                                <Button
+                                                    Grid.Column="3"
+                                                    Command="{Binding DataContext.ReinstallMapCommand, ElementName=Items}"
+                                                    CommandParameter="{Binding}"
+                                                    ToolTip="Restore"
+                                                    Visibility="{Binding Path=IsRemoved, Converter={CONVERTERS:IsBoolToVisibilityConverter}}">
                                                     <Button.Content>
-                                                        <Image Source="{StaticResource UI_IconRestore}" Width="22"/>
+                                                        <Image Width="22" Source="{StaticResource UI_IconRestore}" />
                                                     </Button.Content>
                                                 </Button>
 

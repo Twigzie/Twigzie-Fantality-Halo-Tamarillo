@@ -1,146 +1,145 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- MAPS DEFAULT -->
-    <BitmapImage x:Key="map_unknown" UriSource="/Resources/Images/Maps/map_unknown.png"/>
+    <!--  MAPS DEFAULT  -->
+    <BitmapImage x:Key="map_unknown" UriSource="/Resources/Images/Maps/map_unknown.png" />
 
-    <!-- MAPS HALO 1 -->
-    <BitmapImage x:Key="h1_map_battlecreek" UriSource="/Resources/Images/Maps/h1/h1_map_battlecreek.png"/>
-    <BitmapImage x:Key="h1_map_bloodgulch" UriSource="/Resources/Images/Maps/h1/h1_map_bloodgulch.png"/>
-    <BitmapImage x:Key="h1_map_boardingaction" UriSource="/Resources/Images/Maps/h1/h1_map_boardingaction.png"/>
-    <BitmapImage x:Key="h1_map_chillout" UriSource="/Resources/Images/Maps/h1/h1_map_chillout.png"/>
-    <BitmapImage x:Key="h1_map_chirontl34" UriSource="/Resources/Images/Maps/h1/h1_map_chirontl34.png"/>
-    <BitmapImage x:Key="h1_map_damnation" UriSource="/Resources/Images/Maps/h1/h1_map_damnation.png"/>
-    <BitmapImage x:Key="h1_map_dangercanyon" UriSource="/Resources/Images/Maps/h1/h1_map_dangercanyon.png"/>
-    <BitmapImage x:Key="h1_map_deathisland" UriSource="/Resources/Images/Maps/h1/h1_map_deathisland.png"/>
-    <BitmapImage x:Key="h1_map_derelict" UriSource="/Resources/Images/Maps/h1/h1_map_derelict.png"/>
-    <BitmapImage x:Key="h1_map_gephyrophobia" UriSource="/Resources/Images/Maps/h1/h1_map_gephyrophobia.png"/>
-    <BitmapImage x:Key="h1_map_hangemhigh" UriSource="/Resources/Images/Maps/h1/h1_map_hangemhigh.png"/>
-    <BitmapImage x:Key="h1_map_icefields" UriSource="/Resources/Images/Maps/h1/h1_map_icefields.png"/>
-    <BitmapImage x:Key="h1_map_infinity" UriSource="/Resources/Images/Maps/h1/h1_map_infinity.png"/>
-    <BitmapImage x:Key="h1_map_longest" UriSource="/Resources/Images/Maps/h1/h1_map_longest.png"/>
-    <BitmapImage x:Key="h1_map_prisoner" UriSource="/Resources/Images/Maps/h1/h1_map_prisoner.png"/>
-    <BitmapImage x:Key="h1_map_ratrace" UriSource="/Resources/Images/Maps/h1/h1_map_ratrace.png"/>
-    <BitmapImage x:Key="h1_map_sidewinder" UriSource="/Resources/Images/Maps/h1/h1_map_sidewinder.png"/>
-    <BitmapImage x:Key="h1_map_timberland" UriSource="/Resources/Images/Maps/h1/h1_map_timberland.png"/>
-    <BitmapImage x:Key="h1_map_wizard" UriSource="/Resources/Images/Maps/h1/h1_map_wizard.png"/>
-    
-        <!-- MAPS HALO 2 -->
-    <BitmapImage x:Key="h2_map_ascension" UriSource="/Resources/Images/Maps/h2/h2_map_ascension.png"/>
-    <BitmapImage x:Key="h2_map_backwash" UriSource="/Resources/Images/Maps/h2/h2_map_backwash.png"/>
-    <BitmapImage x:Key="h2_map_beavercreek" UriSource="/Resources/Images/Maps/h2/h2_map_beavercreek.png"/>
-    <BitmapImage x:Key="h2_map_burialmounds" UriSource="/Resources/Images/Maps/h2/h2_map_burialmounds.png"/>
-    <BitmapImage x:Key="h2_map_coagulation" UriSource="/Resources/Images/Maps/h2/h2_map_coagulation.png"/>
-    <BitmapImage x:Key="h2_map_colossus" UriSource="/Resources/Images/Maps/h2/h2_map_colossus.png"/>
-    <BitmapImage x:Key="h2_map_containment" UriSource="/Resources/Images/Maps/h2/h2_map_containment.png"/>
-    <BitmapImage x:Key="h2_map_desolation" UriSource="/Resources/Images/Maps/h2/h2_map_desolation.png"/>
-    <BitmapImage x:Key="h2_map_district" UriSource="/Resources/Images/Maps/h2/h2_map_district.png"/>
-    <BitmapImage x:Key="h2_map_elongation" UriSource="/Resources/Images/Maps/h2/h2_map_elongation.png"/>
-    <BitmapImage x:Key="h2_map_foundation" UriSource="/Resources/Images/Maps/h2/h2_map_foundation.png"/>
-    <BitmapImage x:Key="h2_map_gemini" UriSource="/Resources/Images/Maps/h2/h2_map_gemini.png"/>
-    <BitmapImage x:Key="h2_map_headlong" UriSource="/Resources/Images/Maps/h2/h2_map_headlong.png"/>
-    <BitmapImage x:Key="h2_map_ivorytower" UriSource="/Resources/Images/Maps/h2/h2_map_ivorytower.png"/>
-    <BitmapImage x:Key="h2_map_lockout" UriSource="/Resources/Images/Maps/h2/h2_map_lockout.png"/>
-    <BitmapImage x:Key="h2_map_midship" UriSource="/Resources/Images/Maps/h2/h2_map_midship.png"/>
-    <BitmapImage x:Key="h2_map_relic" UriSource="/Resources/Images/Maps/h2/h2_map_relic.png"/>
-    <BitmapImage x:Key="h2_map_sanctuary" UriSource="/Resources/Images/Maps/h2/h2_map_sanctuary.png"/>
-    <BitmapImage x:Key="h2_map_tombstone" UriSource="/Resources/Images/Maps/h2/h2_map_tombstone.png"/>
-    <BitmapImage x:Key="h2_map_terminal" UriSource="/Resources/Images/Maps/h2/h2_map_terminal.png"/>
-    <BitmapImage x:Key="h2_map_turf" UriSource="/Resources/Images/Maps/h2/h2_map_turf.png"/>
-    <BitmapImage x:Key="h2_map_uplift" UriSource="/Resources/Images/Maps/h2/h2_map_uplift.png"/>
-    <BitmapImage x:Key="h2_map_waterworks" UriSource="/Resources/Images/Maps/h2/h2_map_waterworks.png"/>
-    <BitmapImage x:Key="h2_map_warlock" UriSource="/Resources/Images/Maps/h2/h2_map_warlock.png"/>
-    <BitmapImage x:Key="h2_map_zanzibar" UriSource="/Resources/Images/Maps/h2/h2_map_zanzibar.png"/>
+    <!--  MAPS HALO 1  -->
+    <BitmapImage x:Key="h1_map_battlecreek" UriSource="/Resources/Images/Maps/h1/h1_map_battlecreek.png" />
+    <BitmapImage x:Key="h1_map_bloodgulch" UriSource="/Resources/Images/Maps/h1/h1_map_bloodgulch.png" />
+    <BitmapImage x:Key="h1_map_boardingaction" UriSource="/Resources/Images/Maps/h1/h1_map_boardingaction.png" />
+    <BitmapImage x:Key="h1_map_chillout" UriSource="/Resources/Images/Maps/h1/h1_map_chillout.png" />
+    <BitmapImage x:Key="h1_map_chirontl34" UriSource="/Resources/Images/Maps/h1/h1_map_chirontl34.png" />
+    <BitmapImage x:Key="h1_map_damnation" UriSource="/Resources/Images/Maps/h1/h1_map_damnation.png" />
+    <BitmapImage x:Key="h1_map_dangercanyon" UriSource="/Resources/Images/Maps/h1/h1_map_dangercanyon.png" />
+    <BitmapImage x:Key="h1_map_deathisland" UriSource="/Resources/Images/Maps/h1/h1_map_deathisland.png" />
+    <BitmapImage x:Key="h1_map_derelict" UriSource="/Resources/Images/Maps/h1/h1_map_derelict.png" />
+    <BitmapImage x:Key="h1_map_gephyrophobia" UriSource="/Resources/Images/Maps/h1/h1_map_gephyrophobia.png" />
+    <BitmapImage x:Key="h1_map_hangemhigh" UriSource="/Resources/Images/Maps/h1/h1_map_hangemhigh.png" />
+    <BitmapImage x:Key="h1_map_icefields" UriSource="/Resources/Images/Maps/h1/h1_map_icefields.png" />
+    <BitmapImage x:Key="h1_map_infinity" UriSource="/Resources/Images/Maps/h1/h1_map_infinity.png" />
+    <BitmapImage x:Key="h1_map_longest" UriSource="/Resources/Images/Maps/h1/h1_map_longest.png" />
+    <BitmapImage x:Key="h1_map_prisoner" UriSource="/Resources/Images/Maps/h1/h1_map_prisoner.png" />
+    <BitmapImage x:Key="h1_map_ratrace" UriSource="/Resources/Images/Maps/h1/h1_map_ratrace.png" />
+    <BitmapImage x:Key="h1_map_sidewinder" UriSource="/Resources/Images/Maps/h1/h1_map_sidewinder.png" />
+    <BitmapImage x:Key="h1_map_timberland" UriSource="/Resources/Images/Maps/h1/h1_map_timberland.png" />
+    <BitmapImage x:Key="h1_map_wizard" UriSource="/Resources/Images/Maps/h1/h1_map_wizard.png" />
 
-    <!-- MAPS HALO 2A -->
-    <BitmapImage x:Key="h2a_map_awash" UriSource="/Resources/Images/Maps/h2a/h2a_map_awash.png"/>
-    <BitmapImage x:Key="h2a_map_bloodline" UriSource="/Resources/Images/Maps/h2a/h2a_map_bloodline.png"/>
-    <BitmapImage x:Key="h2a_map_lockdown" UriSource="/Resources/Images/Maps/h2a/h2a_map_lockdown.png"/>
-    <BitmapImage x:Key="h2a_map_nebula" UriSource="/Resources/Images/Maps/h2a/h2a_map_nebula.png"/>
-    <BitmapImage x:Key="h2a_map_remnant" UriSource="/Resources/Images/Maps/h2a/h2a_map_remnant.png"/>
-    <BitmapImage x:Key="h2a_map_shrine" UriSource="/Resources/Images/Maps/h2a/h2a_map_shrine.png"/>
-    <BitmapImage x:Key="h2a_map_skyward" UriSource="/Resources/Images/Maps/h2a/h2a_map_skyward.png"/>
-    <BitmapImage x:Key="h2a_map_stonetown" UriSource="/Resources/Images/Maps/h2a/h2a_map_stonetown.png"/>
-    <BitmapImage x:Key="h2a_map_warlord" UriSource="/Resources/Images/Maps/h2a/h2a_map_warlord.png"/>
-    <BitmapImage x:Key="h2a_map_zenith" UriSource="/Resources/Images/Maps/h2a/h2a_map_zenith.png"/>
+    <!--  MAPS HALO 2  -->
+    <BitmapImage x:Key="h2_map_ascension" UriSource="/Resources/Images/Maps/h2/h2_map_ascension.png" />
+    <BitmapImage x:Key="h2_map_backwash" UriSource="/Resources/Images/Maps/h2/h2_map_backwash.png" />
+    <BitmapImage x:Key="h2_map_beavercreek" UriSource="/Resources/Images/Maps/h2/h2_map_beavercreek.png" />
+    <BitmapImage x:Key="h2_map_burialmounds" UriSource="/Resources/Images/Maps/h2/h2_map_burialmounds.png" />
+    <BitmapImage x:Key="h2_map_coagulation" UriSource="/Resources/Images/Maps/h2/h2_map_coagulation.png" />
+    <BitmapImage x:Key="h2_map_colossus" UriSource="/Resources/Images/Maps/h2/h2_map_colossus.png" />
+    <BitmapImage x:Key="h2_map_containment" UriSource="/Resources/Images/Maps/h2/h2_map_containment.png" />
+    <BitmapImage x:Key="h2_map_desolation" UriSource="/Resources/Images/Maps/h2/h2_map_desolation.png" />
+    <BitmapImage x:Key="h2_map_district" UriSource="/Resources/Images/Maps/h2/h2_map_district.png" />
+    <BitmapImage x:Key="h2_map_elongation" UriSource="/Resources/Images/Maps/h2/h2_map_elongation.png" />
+    <BitmapImage x:Key="h2_map_foundation" UriSource="/Resources/Images/Maps/h2/h2_map_foundation.png" />
+    <BitmapImage x:Key="h2_map_gemini" UriSource="/Resources/Images/Maps/h2/h2_map_gemini.png" />
+    <BitmapImage x:Key="h2_map_headlong" UriSource="/Resources/Images/Maps/h2/h2_map_headlong.png" />
+    <BitmapImage x:Key="h2_map_ivorytower" UriSource="/Resources/Images/Maps/h2/h2_map_ivorytower.png" />
+    <BitmapImage x:Key="h2_map_lockout" UriSource="/Resources/Images/Maps/h2/h2_map_lockout.png" />
+    <BitmapImage x:Key="h2_map_midship" UriSource="/Resources/Images/Maps/h2/h2_map_midship.png" />
+    <BitmapImage x:Key="h2_map_relic" UriSource="/Resources/Images/Maps/h2/h2_map_relic.png" />
+    <BitmapImage x:Key="h2_map_sanctuary" UriSource="/Resources/Images/Maps/h2/h2_map_sanctuary.png" />
+    <BitmapImage x:Key="h2_map_tombstone" UriSource="/Resources/Images/Maps/h2/h2_map_tombstone.png" />
+    <BitmapImage x:Key="h2_map_terminal" UriSource="/Resources/Images/Maps/h2/h2_map_terminal.png" />
+    <BitmapImage x:Key="h2_map_turf" UriSource="/Resources/Images/Maps/h2/h2_map_turf.png" />
+    <BitmapImage x:Key="h2_map_uplift" UriSource="/Resources/Images/Maps/h2/h2_map_uplift.png" />
+    <BitmapImage x:Key="h2_map_waterworks" UriSource="/Resources/Images/Maps/h2/h2_map_waterworks.png" />
+    <BitmapImage x:Key="h2_map_warlock" UriSource="/Resources/Images/Maps/h2/h2_map_warlock.png" />
+    <BitmapImage x:Key="h2_map_zanzibar" UriSource="/Resources/Images/Maps/h2/h2_map_zanzibar.png" />
 
-    <!-- MAPS HALO 3 -->
-    <BitmapImage x:Key="h3_map_assembly"  UriSource="/Resources/Images/Maps/h3/h3_map_assembly.png"/>
-    <BitmapImage x:Key="h3_map_avalanche" UriSource="/Resources/Images/Maps/h3/h3_map_avalanche.png"/>
-    <BitmapImage x:Key="h3_map_blackout" UriSource="/Resources/Images/Maps/h3/h3_map_blackout.png"/>
-    <BitmapImage x:Key="h3_map_fortress" UriSource="/Resources/Images/Maps/h3/h3_map_fortress.png"/>
-    <BitmapImage x:Key="h3_map_coldstorage" UriSource="/Resources/Images/Maps/h3/h3_map_coldstorage.png"/>
-    <BitmapImage x:Key="h3_map_construct" UriSource="/Resources/Images/Maps/h3/h3_map_construct.png"/>
-    <BitmapImage x:Key="h3_map_epitaph" UriSource="/Resources/Images/Maps/h3/h3_map_epitaph.png"/>
-    <BitmapImage x:Key="h3_map_foundry" UriSource="/Resources/Images/Maps/h3/h3_map_foundry.png"/>
-    <BitmapImage x:Key="h3_map_ghosttown" UriSource="/Resources/Images/Maps/h3/h3_map_ghosttown.png"/>
-    <BitmapImage x:Key="h3_map_guardian" UriSource="/Resources/Images/Maps/h3/h3_map_guardian.png"/>
-    <BitmapImage x:Key="h3_map_heretic" UriSource="/Resources/Images/Maps/h3/h3_map_heretic.png"/>
-    <BitmapImage x:Key="h3_map_highground" UriSource="/Resources/Images/Maps/h3/h3_map_highground.png"/>
-    <BitmapImage x:Key="h3_map_isolation" UriSource="/Resources/Images/Maps/h3/h3_map_isolation.png"/>
-    <BitmapImage x:Key="h3_map_lastresort" UriSource="/Resources/Images/Maps/h3/h3_map_lastresort.png"/>
-    <BitmapImage x:Key="h3_map_longshore" UriSource="/Resources/Images/Maps/h3/h3_map_longshore.png"/>
-    <BitmapImage x:Key="h3_map_narrows" UriSource="/Resources/Images/Maps/h3/h3_map_narrows.png"/>
-    <BitmapImage x:Key="h3_map_orbital" UriSource="/Resources/Images/Maps/h3/h3_map_orbital.png"/>
-    <BitmapImage x:Key="h3_map_ratsnest" UriSource="/Resources/Images/Maps/h3/h3_map_ratsnest.png"/>
-    <BitmapImage x:Key="h3_map_s3d_edge" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_edge.png"/>
-    <BitmapImage x:Key="h3_map_s3d_turf" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_turf.png"/>
-    <BitmapImage x:Key="h3_map_s3d_waterfall" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_waterfall.png"/>
-    <BitmapImage x:Key="h3_map_sandbox" UriSource="/Resources/Images/Maps/h3/h3_map_sandbox.png"/>
-    <BitmapImage x:Key="h3_map_sandtrap" UriSource="/Resources/Images/Maps/h3/h3_map_sandtrap.png"/>
-    <BitmapImage x:Key="h3_map_snowbound" UriSource="/Resources/Images/Maps/h3/h3_map_snowbound.png"/>
-    <BitmapImage x:Key="h3_map_standoff" UriSource="/Resources/Images/Maps/h3/h3_map_standoff.png"/>
-    <BitmapImage x:Key="h3_map_thepit" UriSource="/Resources/Images/Maps/h3/h3_map_thepit.png"/>
-    <BitmapImage x:Key="h3_map_valhalla" UriSource="/Resources/Images/Maps/h3/h3_map_valhalla.png"/>
+    <!--  MAPS HALO 2A  -->
+    <BitmapImage x:Key="h2a_map_awash" UriSource="/Resources/Images/Maps/h2a/h2a_map_awash.png" />
+    <BitmapImage x:Key="h2a_map_bloodline" UriSource="/Resources/Images/Maps/h2a/h2a_map_bloodline.png" />
+    <BitmapImage x:Key="h2a_map_lockdown" UriSource="/Resources/Images/Maps/h2a/h2a_map_lockdown.png" />
+    <BitmapImage x:Key="h2a_map_nebula" UriSource="/Resources/Images/Maps/h2a/h2a_map_nebula.png" />
+    <BitmapImage x:Key="h2a_map_remnant" UriSource="/Resources/Images/Maps/h2a/h2a_map_remnant.png" />
+    <BitmapImage x:Key="h2a_map_shrine" UriSource="/Resources/Images/Maps/h2a/h2a_map_shrine.png" />
+    <BitmapImage x:Key="h2a_map_skyward" UriSource="/Resources/Images/Maps/h2a/h2a_map_skyward.png" />
+    <BitmapImage x:Key="h2a_map_stonetown" UriSource="/Resources/Images/Maps/h2a/h2a_map_stonetown.png" />
+    <BitmapImage x:Key="h2a_map_warlord" UriSource="/Resources/Images/Maps/h2a/h2a_map_warlord.png" />
+    <BitmapImage x:Key="h2a_map_zenith" UriSource="/Resources/Images/Maps/h2a/h2a_map_zenith.png" />
 
-    <!-- MAPS HALO REACH -->
-    <BitmapImage x:Key="hr_map_anchor9"  UriSource="/Resources/Images/Maps/hr/hr_map_anchor9.png"/>
-    <BitmapImage x:Key="hr_map_battlecanyon"  UriSource="/Resources/Images/Maps/hr/hr_map_battlecanyon.png"/>
-    <BitmapImage x:Key="hr_map_boardwalk"  UriSource="/Resources/Images/Maps/hr/hr_map_boardwalk.png"/>
-    <BitmapImage x:Key="hr_map_boneyard"  UriSource="/Resources/Images/Maps/hr/hr_map_boneyard.png"/>
-    <BitmapImage x:Key="hr_map_breakneck"  UriSource="/Resources/Images/Maps/hr/hr_map_breakneck.png"/>
-    <BitmapImage x:Key="hr_map_breakpoint"  UriSource="/Resources/Images/Maps/hr/hr_map_breakpoint.png"/>
-    <BitmapImage x:Key="hr_map_condemned"  UriSource="/Resources/Images/Maps/hr/hr_map_condemned.png"/>
-    <BitmapImage x:Key="hr_map_countdown"  UriSource="/Resources/Images/Maps/hr/hr_map_countdown.png"/>
-    <BitmapImage x:Key="hr_map_forgeworld"  UriSource="/Resources/Images/Maps/hr/hr_map_forgeworld.png"/>
-    <BitmapImage x:Key="hr_map_highlands"  UriSource="/Resources/Images/Maps/hr/hr_map_highlands.png"/>
-    <BitmapImage x:Key="hr_map_highnoon"  UriSource="/Resources/Images/Maps/hr/hr_map_highnoon.png"/>
-    <BitmapImage x:Key="hr_map_penance"  UriSource="/Resources/Images/Maps/hr/hr_map_penance.png"/>
-    <BitmapImage x:Key="hr_map_powerhouse"  UriSource="/Resources/Images/Maps/hr/hr_map_powerhouse.png"/>
-    <BitmapImage x:Key="hr_map_reflection"  UriSource="/Resources/Images/Maps/hr/hr_map_reflection.png"/>
-    <BitmapImage x:Key="hr_map_ridgeline" UriSource="/Resources/Images/Maps/hr/hr_map_ridgeline.png"/>
-    <BitmapImage x:Key="hr_map_solitary" UriSource="/Resources/Images/Maps/hr/hr_map_solitary.png"/>
-    <BitmapImage x:Key="hr_map_spire" UriSource="/Resources/Images/Maps/hr/hr_map_spire.png"/>
-    <BitmapImage x:Key="hr_map_swordbase" UriSource="/Resources/Images/Maps/hr/hr_map_swordbase.png"/>
-    <BitmapImage x:Key="hr_map_tempest" UriSource="/Resources/Images/Maps/hr/hr_map_tempest.png"/>
-    <BitmapImage x:Key="hr_map_zealot" UriSource="/Resources/Images/Maps/hr/hr_map_zealot.png"/>
-    
-    <!-- MAPS HALO 4 -->
-    <BitmapImage x:Key="h4_map_abandon" UriSource="/Resources/Images/Maps/h4/h4_map_abandon.png"/>
-    <BitmapImage x:Key="h4_map_adrift" UriSource="/Resources/Images/Maps/h4/h4_map_adrift.png"/>
-    <BitmapImage x:Key="h4_map_complex" UriSource="/Resources/Images/Maps/h4/h4_map_complex.png"/>
-    <BitmapImage x:Key="h4_map_daybreak" UriSource="/Resources/Images/Maps/h4/h4_map_daybreak.png"/>
-    <BitmapImage x:Key="h4_map_erosion" UriSource="/Resources/Images/Maps/h4/h4_map_erosion.png"/>
-    <BitmapImage x:Key="h4_map_exile" UriSource="/Resources/Images/Maps/h4/h4_map_exile.png"/>
-    <BitmapImage x:Key="h4_map_forgeisland" UriSource="/Resources/Images/Maps/h4/h4_map_forgeisland.png"/>
-    <BitmapImage x:Key="h4_map_harvest" UriSource="/Resources/Images/Maps/h4/h4_map_harvest.png"/>
-    <BitmapImage x:Key="h4_map_haven" UriSource="/Resources/Images/Maps/h4/h4_map_haven.png"/>
-    <BitmapImage x:Key="h4_map_impact" UriSource="/Resources/Images/Maps/h4/h4_map_impact.png"/>
-    <BitmapImage x:Key="h4_map_landfall" UriSource="/Resources/Images/Maps/h4/h4_map_landfall.png"/>
-    <BitmapImage x:Key="h4_map_longbow" UriSource="/Resources/Images/Maps/h4/h4_map_longbow.png"/>
-    <BitmapImage x:Key="h4_map_meltdown" UriSource="/Resources/Images/Maps/h4/h4_map_meltdown.png"/>
-    <BitmapImage x:Key="h4_map_monolith" UriSource="/Resources/Images/Maps/h4/h4_map_monolith.png"/>
-    <BitmapImage x:Key="h4_map_outcast" UriSource="/Resources/Images/Maps/h4/h4_map_outcast.png"/>
-    <BitmapImage x:Key="h4_map_perdition" UriSource="/Resources/Images/Maps/h4/h4_map_perdition.png"/>
-    <BitmapImage x:Key="h4_map_pitfall" UriSource="/Resources/Images/Maps/h4/h4_map_pitfall.png"/>
-    <BitmapImage x:Key="h4_map_ragnarok" UriSource="/Resources/Images/Maps/h4/h4_map_ragnarok.png"/>
-    <BitmapImage x:Key="h4_map_ravine" UriSource="/Resources/Images/Maps/h4/h4_map_ravine.png"/>
-    <BitmapImage x:Key="h4_map_shatter" UriSource="/Resources/Images/Maps/h4/h4_map_shatter.png"/>
-    <BitmapImage x:Key="h4_map_skyline" UriSource="/Resources/Images/Maps/h4/h4_map_skyline.png"/>
-    <BitmapImage x:Key="h4_map_solace" UriSource="/Resources/Images/Maps/h4/h4_map_solace.png"/>
-    <BitmapImage x:Key="h4_map_vertigo" UriSource="/Resources/Images/Maps/h4/h4_map_vertigo.png"/>
-    <BitmapImage x:Key="h4_map_vortex" UriSource="/Resources/Images/Maps/h4/h4_map_vortex.png"/>
-    <BitmapImage x:Key="h4_map_wreckage" UriSource="/Resources/Images/Maps/h4/h4_map_wreckage.png"/>
+    <!--  MAPS HALO 3  -->
+    <BitmapImage x:Key="h3_map_assembly" UriSource="/Resources/Images/Maps/h3/h3_map_assembly.png" />
+    <BitmapImage x:Key="h3_map_avalanche" UriSource="/Resources/Images/Maps/h3/h3_map_avalanche.png" />
+    <BitmapImage x:Key="h3_map_blackout" UriSource="/Resources/Images/Maps/h3/h3_map_blackout.png" />
+    <BitmapImage x:Key="h3_map_fortress" UriSource="/Resources/Images/Maps/h3/h3_map_fortress.png" />
+    <BitmapImage x:Key="h3_map_coldstorage" UriSource="/Resources/Images/Maps/h3/h3_map_coldstorage.png" />
+    <BitmapImage x:Key="h3_map_construct" UriSource="/Resources/Images/Maps/h3/h3_map_construct.png" />
+    <BitmapImage x:Key="h3_map_epitaph" UriSource="/Resources/Images/Maps/h3/h3_map_epitaph.png" />
+    <BitmapImage x:Key="h3_map_foundry" UriSource="/Resources/Images/Maps/h3/h3_map_foundry.png" />
+    <BitmapImage x:Key="h3_map_ghosttown" UriSource="/Resources/Images/Maps/h3/h3_map_ghosttown.png" />
+    <BitmapImage x:Key="h3_map_guardian" UriSource="/Resources/Images/Maps/h3/h3_map_guardian.png" />
+    <BitmapImage x:Key="h3_map_heretic" UriSource="/Resources/Images/Maps/h3/h3_map_heretic.png" />
+    <BitmapImage x:Key="h3_map_highground" UriSource="/Resources/Images/Maps/h3/h3_map_highground.png" />
+    <BitmapImage x:Key="h3_map_isolation" UriSource="/Resources/Images/Maps/h3/h3_map_isolation.png" />
+    <BitmapImage x:Key="h3_map_lastresort" UriSource="/Resources/Images/Maps/h3/h3_map_lastresort.png" />
+    <BitmapImage x:Key="h3_map_longshore" UriSource="/Resources/Images/Maps/h3/h3_map_longshore.png" />
+    <BitmapImage x:Key="h3_map_narrows" UriSource="/Resources/Images/Maps/h3/h3_map_narrows.png" />
+    <BitmapImage x:Key="h3_map_orbital" UriSource="/Resources/Images/Maps/h3/h3_map_orbital.png" />
+    <BitmapImage x:Key="h3_map_ratsnest" UriSource="/Resources/Images/Maps/h3/h3_map_ratsnest.png" />
+    <BitmapImage x:Key="h3_map_s3d_edge" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_edge.png" />
+    <BitmapImage x:Key="h3_map_s3d_turf" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_turf.png" />
+    <BitmapImage x:Key="h3_map_s3d_waterfall" UriSource="/Resources/Images/Maps/h3/h3_map_s3d_waterfall.png" />
+    <BitmapImage x:Key="h3_map_sandbox" UriSource="/Resources/Images/Maps/h3/h3_map_sandbox.png" />
+    <BitmapImage x:Key="h3_map_sandtrap" UriSource="/Resources/Images/Maps/h3/h3_map_sandtrap.png" />
+    <BitmapImage x:Key="h3_map_snowbound" UriSource="/Resources/Images/Maps/h3/h3_map_snowbound.png" />
+    <BitmapImage x:Key="h3_map_standoff" UriSource="/Resources/Images/Maps/h3/h3_map_standoff.png" />
+    <BitmapImage x:Key="h3_map_thepit" UriSource="/Resources/Images/Maps/h3/h3_map_thepit.png" />
+    <BitmapImage x:Key="h3_map_valhalla" UriSource="/Resources/Images/Maps/h3/h3_map_valhalla.png" />
+
+    <!--  MAPS HALO REACH  -->
+    <BitmapImage x:Key="hr_map_anchor9" UriSource="/Resources/Images/Maps/hr/hr_map_anchor9.png" />
+    <BitmapImage x:Key="hr_map_battlecanyon" UriSource="/Resources/Images/Maps/hr/hr_map_battlecanyon.png" />
+    <BitmapImage x:Key="hr_map_boardwalk" UriSource="/Resources/Images/Maps/hr/hr_map_boardwalk.png" />
+    <BitmapImage x:Key="hr_map_boneyard" UriSource="/Resources/Images/Maps/hr/hr_map_boneyard.png" />
+    <BitmapImage x:Key="hr_map_breakneck" UriSource="/Resources/Images/Maps/hr/hr_map_breakneck.png" />
+    <BitmapImage x:Key="hr_map_breakpoint" UriSource="/Resources/Images/Maps/hr/hr_map_breakpoint.png" />
+    <BitmapImage x:Key="hr_map_condemned" UriSource="/Resources/Images/Maps/hr/hr_map_condemned.png" />
+    <BitmapImage x:Key="hr_map_countdown" UriSource="/Resources/Images/Maps/hr/hr_map_countdown.png" />
+    <BitmapImage x:Key="hr_map_forgeworld" UriSource="/Resources/Images/Maps/hr/hr_map_forgeworld.png" />
+    <BitmapImage x:Key="hr_map_highlands" UriSource="/Resources/Images/Maps/hr/hr_map_highlands.png" />
+    <BitmapImage x:Key="hr_map_highnoon" UriSource="/Resources/Images/Maps/hr/hr_map_highnoon.png" />
+    <BitmapImage x:Key="hr_map_penance" UriSource="/Resources/Images/Maps/hr/hr_map_penance.png" />
+    <BitmapImage x:Key="hr_map_powerhouse" UriSource="/Resources/Images/Maps/hr/hr_map_powerhouse.png" />
+    <BitmapImage x:Key="hr_map_reflection" UriSource="/Resources/Images/Maps/hr/hr_map_reflection.png" />
+    <BitmapImage x:Key="hr_map_ridgeline" UriSource="/Resources/Images/Maps/hr/hr_map_ridgeline.png" />
+    <BitmapImage x:Key="hr_map_solitary" UriSource="/Resources/Images/Maps/hr/hr_map_solitary.png" />
+    <BitmapImage x:Key="hr_map_spire" UriSource="/Resources/Images/Maps/hr/hr_map_spire.png" />
+    <BitmapImage x:Key="hr_map_swordbase" UriSource="/Resources/Images/Maps/hr/hr_map_swordbase.png" />
+    <BitmapImage x:Key="hr_map_tempest" UriSource="/Resources/Images/Maps/hr/hr_map_tempest.png" />
+    <BitmapImage x:Key="hr_map_zealot" UriSource="/Resources/Images/Maps/hr/hr_map_zealot.png" />
+
+    <!--  MAPS HALO 4  -->
+    <BitmapImage x:Key="h4_map_abandon" UriSource="/Resources/Images/Maps/h4/h4_map_abandon.png" />
+    <BitmapImage x:Key="h4_map_adrift" UriSource="/Resources/Images/Maps/h4/h4_map_adrift.png" />
+    <BitmapImage x:Key="h4_map_complex" UriSource="/Resources/Images/Maps/h4/h4_map_complex.png" />
+    <BitmapImage x:Key="h4_map_daybreak" UriSource="/Resources/Images/Maps/h4/h4_map_daybreak.png" />
+    <BitmapImage x:Key="h4_map_erosion" UriSource="/Resources/Images/Maps/h4/h4_map_erosion.png" />
+    <BitmapImage x:Key="h4_map_exile" UriSource="/Resources/Images/Maps/h4/h4_map_exile.png" />
+    <BitmapImage x:Key="h4_map_forgeisland" UriSource="/Resources/Images/Maps/h4/h4_map_forgeisland.png" />
+    <BitmapImage x:Key="h4_map_harvest" UriSource="/Resources/Images/Maps/h4/h4_map_harvest.png" />
+    <BitmapImage x:Key="h4_map_haven" UriSource="/Resources/Images/Maps/h4/h4_map_haven.png" />
+    <BitmapImage x:Key="h4_map_impact" UriSource="/Resources/Images/Maps/h4/h4_map_impact.png" />
+    <BitmapImage x:Key="h4_map_landfall" UriSource="/Resources/Images/Maps/h4/h4_map_landfall.png" />
+    <BitmapImage x:Key="h4_map_longbow" UriSource="/Resources/Images/Maps/h4/h4_map_longbow.png" />
+    <BitmapImage x:Key="h4_map_meltdown" UriSource="/Resources/Images/Maps/h4/h4_map_meltdown.png" />
+    <BitmapImage x:Key="h4_map_monolith" UriSource="/Resources/Images/Maps/h4/h4_map_monolith.png" />
+    <BitmapImage x:Key="h4_map_outcast" UriSource="/Resources/Images/Maps/h4/h4_map_outcast.png" />
+    <BitmapImage x:Key="h4_map_perdition" UriSource="/Resources/Images/Maps/h4/h4_map_perdition.png" />
+    <BitmapImage x:Key="h4_map_pitfall" UriSource="/Resources/Images/Maps/h4/h4_map_pitfall.png" />
+    <BitmapImage x:Key="h4_map_ragnarok" UriSource="/Resources/Images/Maps/h4/h4_map_ragnarok.png" />
+    <BitmapImage x:Key="h4_map_ravine" UriSource="/Resources/Images/Maps/h4/h4_map_ravine.png" />
+    <BitmapImage x:Key="h4_map_shatter" UriSource="/Resources/Images/Maps/h4/h4_map_shatter.png" />
+    <BitmapImage x:Key="h4_map_skyline" UriSource="/Resources/Images/Maps/h4/h4_map_skyline.png" />
+    <BitmapImage x:Key="h4_map_solace" UriSource="/Resources/Images/Maps/h4/h4_map_solace.png" />
+    <BitmapImage x:Key="h4_map_vertigo" UriSource="/Resources/Images/Maps/h4/h4_map_vertigo.png" />
+    <BitmapImage x:Key="h4_map_vortex" UriSource="/Resources/Images/Maps/h4/h4_map_vortex.png" />
+    <BitmapImage x:Key="h4_map_wreckage" UriSource="/Resources/Images/Maps/h4/h4_map_wreckage.png" />
 
 
 </ResourceDictionary>
